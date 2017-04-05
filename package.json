@@ -1,0 +1,52 @@
+{
+  "name": "react-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -w",
+    "start": "node server.js",
+    "dev": "webpack-dev-server --content-base public/ --inline --hot --port 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masonposch/react-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masonposch/react-portfolio/issues"
+  },
+  "homepage": "https://github.com/masonposch/react-portfolio#readme",
+  "dependencies": {
+    "axios": "^0.16.0",
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.17.1",
+    "classnames": "^2.2.5",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "file-loader": "^0.11.1",
+    "method-override": "^2.3.8",
+    "mongoose": "^4.9.3",
+    "morgan": "^1.8.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "path": "^0.12.7",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "request": "^2.81.0",
+    "url-loader": "^0.5.8",
+    "validator": "^7.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  }
+}
