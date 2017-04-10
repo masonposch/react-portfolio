@@ -25,8 +25,8 @@ app.set('views', path.join(__dirname, 'views'));
 
 //Override POST to have DELETE and PUT
 app.use(methodOverride('_method'))
-	.use(logger('dev')
-	.use(bodyParser.json)
+	.use(logger('dev'))
+	.use(bodyParser.json())
 	.use(bodyParser.urlencoded({ extended: false }))
 	.use(bodyParser.text())
 	.use(bodyParser.json({ type: "application/vnd.api+json" }))
@@ -38,7 +38,7 @@ app.use(methodOverride('_method'))
 	.use(passport.session())
 
 // Serve static content for the app from the "public" directory in the application directory.
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')))
 
 
 //=====================================================================
@@ -47,23 +47,34 @@ app.use(express.static(path.join(__dirname, 'public')));
 // app.use('/search', search_controller)
 //=====================================================================
 
+//=====================================================================
+
+//CREATE DB
 
 // Database configuration with mongoose. Uses local database when not in production
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/masonportfolio");
-const db = mongoose.connection;
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/masonportfolio");
+// const db = mongoose.connection;
+
+
 
 //Show any mongoose errors
-db.on("error", (error)=> {
-	console.log("Mongosse Error: ", error)
-})
+// db.on("error", (error)=> {
+// 	console.log("Mongosse Error: ", error)
+// })
 
 //Once logged into the db through mongoose, log a success message
-db.once("open", ()=> {
-	console.log("Mongosse connection successful.")
-})
+// db.once("open", ()=> {
+// 	console.log("Mongosse connection successful.")
+// })
+
+
+//=====================================================================
+
+
+
 
 //Use port 3000 for development, otherwise use any available port during production
-const port process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 //Listen on port 3000 when local
 app.listen(port, ()=> {
