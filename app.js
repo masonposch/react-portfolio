@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Routes from '.src/config/routes'
-import Main from './src/Main'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Routes from './app/config/Routes';
+import Main from './app/Main.js';
 
 
-ReactDOM.render(Routes, document.getElementById('app'))
+ReactDOM.render(<Main />, document.getElementById('app'));

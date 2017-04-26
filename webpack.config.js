@@ -1,3 +1,26 @@
+// module.exports = {
+
+// 	entry: "./app.js",
+// 	output: {
+// 		filename: "public/bundle.js"
+// 	},
+
+// 	module: {
+// 		loaders: [
+// 			{
+// 				test: /\.js$/,
+// 				exclude: /node_modules/,
+// 				loader: 'babel-loader',
+// 				query: {
+// 					presets: ["react", "es2015"]
+// 				}
+// 			}
+// 		]
+// 	}
+// }
+
+
+
 const path = require('path');
 const DIST_DIR = path.resolve(__dirname, "./app.js")
 const DIST_SRC = path.resolve(__dirname, "public")
@@ -5,14 +28,14 @@ const DIST_SRC = path.resolve(__dirname, "public")
 module.exports = {
 	entry: DIST_DIR,
 	output: {
-		path:DIST_SRC,
+		path: DIST_SRC,
 		filename: 'bundle.js',
 		publicPath: "/"
 	},
 	module: {
 		loaders: [
 			{
-				test:/\.js$/,
+				test: /\.js$/,
 				loader: "babel-loader",
 				query: {
 					presets: ["es2015", "react"]
@@ -25,7 +48,7 @@ module.exports = {
 					presets: ["es2015", "react"]
 				}
 			},
-			{
+			{ 
 				test: /\.(jpe?g|png|gif|svg)$/i,
 				loader: 'url?limit=10000!img?progressive=true'
 			}
