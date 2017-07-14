@@ -1,3 +1,43 @@
-h1 {
-	color: orange;	
+//Homepage
+.hero-image {
+	background-image: url(../assets/images/space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 750px;
+    background-position: 0px -460px;
+    .hero-text {
+    	width: 460px;
+	    display: block;
+	    margin: 0px auto;
+	    padding: 260px 0;
+    	h1 {
+			color: #fff;
+			font-family: 'Poppins', sans-serif;	
+            width: 100%;
+		}
+        button {
+            color: #fff;
+            background-color: #1bbc9b;
+            padding: 10px 30px;
+            border-style: none;
+            border-radius: 15px;
+            margin: 40px 0 0 0;
+            &:hover {
+                background-color: #159981;
+            }
+        }
+    }
 }
+
+.featured-section {
+    background-color: #f2f4f7;
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;   
+    img {
+        height: 60px;
+    }
+}
+
+
+
