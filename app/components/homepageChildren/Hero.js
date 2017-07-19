@@ -18,8 +18,8 @@ class Hero extends React.Component{
 		}, 3000)
 
 		return (
-				<div className="hero-image">
-					<div className="hero-text text-center">
+				<div className="background-image">
+					<div className="background-text text-center">
 						<h1>{this.state.greeting}</h1>
 						<button>View My Resume</button>
 					</div>

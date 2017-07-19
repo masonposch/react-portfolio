@@ -1,32 +1,74 @@
-.hero-image {
-  background-image: url(../assets/images/space.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 750px;
-  background-position: 0px -460px; }
-  .hero-image .hero-text {
-    width: 460px;
-    display: block;
-    margin: 0px auto;
-    padding: 260px 0; }
-    .hero-image .hero-text h1 {
-      color: #fff;
-      font-family: 'Poppins', sans-serif;
-      width: 100%; }
-    .hero-image .hero-text button {
-      color: #fff;
-      background-color: #1bbc9b;
-      padding: 10px 30px;
-      border-style: none;
-      border-radius: 15px;
-      margin: 40px 0 0 0; }
-      .hero-image .hero-text button:hover {
-        background-color: #159981; }
-
-.featured-section {
-  background-color: #f2f4f7;
-  padding: 40px;
-  display: flex;
-  justify-content: space-around; }
-  .featured-section img {
-    height: 60px; }
+/*
+* Skeleton-SASS V1.0
+* Copyright 2012 by Michael Lazer-Walker
+* https://github.com/lazerwalker/Skeleton-Sass
+*
+* Based off of Skeleton v1.1:
+* https://github.com/dhgamache/Skeleton
+*
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*/
+/* #Variable Definitions
+================================================== */
+/* Grid
+================================================== */
+/* #Clearing
+================================================== */
+/* Include clearfix on parent to clear nested columns,
+or wrap each row of columns in a @include row */
+/* You can also use a @include clear to clear columns */
+body, html, #app, .main, .homePageRender {
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+  body .background-image, html .background-image, #app .background-image, .main .background-image, .homePageRender .background-image {
+    background-image: url(../assets/images/space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    position: relative; }
+    body .background-image .background-text, html .background-image .background-text, #app .background-image .background-text, .main .background-image .background-text, .homePageRender .background-image .background-text {
+      width: 460px;
+      display: block;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      position: absolute;
+      transform: translate(-50%, -50%); }
+      body .background-image .background-text h1, html .background-image .background-text h1, #app .background-image .background-text h1, .main .background-image .background-text h1, .homePageRender .background-image .background-text h1 {
+        color: #fff;
+        font-family: 'Poppins', sans-serif;
+        width: 100%; }
+      body .background-image .background-text button, html .background-image .background-text button, #app .background-image .background-text button, .main .background-image .background-text button, .homePageRender .background-image .background-text button {
+        color: #fff;
+        background-color: #1bbc9b;
+        padding: 10px 30px;
+        border-style: none;
+        border-radius: 15px;
+        margin: 40px 0 0 0; }
+        body .background-image .background-text button:hover, html .background-image .background-text button:hover, #app .background-image .background-text button:hover, .main .background-image .background-text button:hover, .homePageRender .background-image .background-text button:hover {
+          background-color: #159981; }
+    @media only screen and (max-width: 959px) {
+      body .background-image, html .background-image, #app .background-image, .main .background-image, .homePageRender .background-image {
+        height: 75%; } }
+    @media only screen and (max-width: 767px) {
+      body .background-image, html .background-image, #app .background-image, .main .background-image, .homePageRender .background-image {
+        height: 50%; }
+        body .background-image .background-text h1, html .background-image .background-text h1, #app .background-image .background-text h1, .main .background-image .background-text h1, .homePageRender .background-image .background-text h1 {
+          font-size: 25px; } }
+  body .featured-section, html .featured-section, #app .featured-section, .main .featured-section, .homePageRender .featured-section {
+    background-color: #f2f4f7;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    body .featured-section img, html .featured-section img, #app .featured-section img, .main .featured-section img, .homePageRender .featured-section img {
+      height: 60px; }
+      @media only screen and (max-width: 959px) {
+        body .featured-section img, html .featured-section img, #app .featured-section img, .main .featured-section img, .homePageRender .featured-section img {
+          margin: 0 0 20px 0; } }
+    @media only screen and (max-width: 767px) {
+      body .featured-section, html .featured-section, #app .featured-section, .main .featured-section, .homePageRender .featured-section {
+        padding: 40px 131px; } }
