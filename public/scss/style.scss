@@ -70,8 +70,20 @@ body, html, #app, .main, .homePageRender {
     }
 
 
+    .featuredProjects {
+        .project {
+            img {
+                float: left;
+                width: 50%;
+                @include breakpoint(smallnarrow){
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+
 
 }
-
 
 

@@ -33,7 +33,7 @@ class WorkSamples extends React.Component {
 
 		return(
 
-			<div>
+			<div className="featuredProjects">
 				{project}
 			</div>
 

@@ -72,3 +72,9 @@ body, html, #app, .main, .homePageRender {
     @media only screen and (max-width: 767px) {
       body .featured-section, html .featured-section, #app .featured-section, .main .featured-section, .homePageRender .featured-section {
         padding: 40px 131px; } }
+  body .featuredProjects .project img, html .featuredProjects .project img, #app .featuredProjects .project img, .main .featuredProjects .project img, .homePageRender .featuredProjects .project img {
+    float: left;
+    width: 50%; }
+    @media only screen and (max-width: 479px) {
+      body .featuredProjects .project img, html .featuredProjects .project img, #app .featuredProjects .project img, .main .featuredProjects .project img, .homePageRender .featuredProjects .project img {
+        width: 100%; } }
