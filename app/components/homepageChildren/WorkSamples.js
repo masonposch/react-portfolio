@@ -12,10 +12,10 @@ class WorkSamples extends React.Component {
 		//Create the state of each project, along with all attributes for the given project
 		this.state = {
 			projects: [
-				{ title: "Bake A Wish", image: "/assets/images/placeholder.jpg", alt: "Bake A Wish" },
-				{ title: "Homeside", image: "/assets/images/placeholder.jpg", alt: "Homeside" },
-				{ title: "Votery", image: "/assets/images/placeholder.jpg", alt: "Votery" },
-				{ title: "Buyak", image: "/assets/images/placeholder.jpg", alt: "Buyak" }
+				{ title: "Bake A Wish", image: "/assets/images/bake-a-wish-logo.png", alt: "Bake A Wish", url: "#" },
+				{ title: "Homeside", image: "/assets/images/homeside-logo.png", alt: "Homeside", url: "#" },
+				{ title: "Votery", image: "/assets/images/votery-logo.png", alt: "Votery", url: "#" },
+				{ title: "Buyak", image: "/assets/images/buyak-logo.png", alt: "Buyak", url: "#" }
 			]
 		}
 	}
@@ -25,9 +25,9 @@ class WorkSamples extends React.Component {
 		var project = this.state.projects.map(function(d) {
 			return(
 				//Individual key for each project being mapped
-				<div key={d.title} className="project">
-					<img src={d.image} title={d.title} alt={d.alt} />
-				</div>
+				<a key={d.title} href={d.url} className="project">
+						<img src={d.image} title={d.title} alt={d.alt} />
+				</a>
 			);
 		}.bind(this));
 

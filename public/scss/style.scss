@@ -71,12 +71,42 @@ body, html, #app, .main, .homePageRender {
 
 
     .featuredProjects {
-        .project {
+        a.project {
+            float: left;
+            width: 50%;
+            height: 350px;
+            position: relative;
+            &:nth-child(1), &:nth-child(4){
+                background: #f9f9f9;
+            }
+            &:nth-child(2), &:nth-child(3){
+                background: #fcfcfc;
+            }
+            @include breakpoint(smallnarrow){
+                height: 290px;
+            }
+            @include breakpoint(smallnarrow){
+                height: 250px;
+            }
+            @include breakpoint(smallnarrow){
+                width: 100%;
+            }
             img {
-                float: left;
-                width: 50%;
+                max-height: 100%;
+                max-width: 100%;
+                width: auto;
+                height: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+                @include breakpoint(medium){
+                    max-width: 75%;
+                }
                 @include breakpoint(smallnarrow){
-                    width: 100%;
+                    max-width: 50%;
                 }
             }
         }
