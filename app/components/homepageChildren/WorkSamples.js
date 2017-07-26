@@ -12,10 +12,10 @@ class WorkSamples extends React.Component {
 		//Create the state of each project, along with all attributes for the given project
 		this.state = {
 			projects: [
-				{ title: "Bake A Wish", image: "/assets/images/bake-a-wish-logo.png", alt: "Bake A Wish", url: "#" },
-				{ title: "Homeside", image: "/assets/images/homeside-logo.png", alt: "Homeside", url: "#" },
-				{ title: "Votery", image: "/assets/images/votery-logo.png", alt: "Votery", url: "#" },
-				{ title: "Buyak", image: "/assets/images/buyak-logo.png", alt: "Buyak", url: "#" }
+				{ title: "Bake A Wish", image: "/assets/images/bake-a-wish-logo.png", alt: "Bake A Wish", url: "http://bakeawish.wpengine.com/", target: "_blank" },
+				{ title: "Homeside", image: "/assets/images/homeside-logo.png", alt: "Homeside", url: "https://mmsk-homeside.herokuapp.com/#/login", target: "_blank" },
+				{ title: "Votery", image: "/assets/images/votery-logo.png", alt: "Votery", url: "https://morning-garden-54466.herokuapp.com/votery", target: "_blank" },
+				{ title: "Buyak", image: "/assets/images/buyak-logo.png", alt: "Buyak", url: "https://quiet-peak-65065.herokuapp.com/", target: "_blank" }
 			]
 		}
 	}
@@ -25,7 +25,7 @@ class WorkSamples extends React.Component {
 		var project = this.state.projects.map(function(d) {
 			return(
 				//Individual key for each project being mapped
-				<a key={d.title} href={d.url} className="project">
+				<a key={d.title} href={d.url} target={d.target} className="project">
 						<img src={d.image} title={d.title} alt={d.alt} />
 				</a>
 			);

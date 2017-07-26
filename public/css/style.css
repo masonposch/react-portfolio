@@ -76,20 +76,20 @@ body, html, #app, .main, .homePageRender {
     float: left;
     width: 50%;
     height: 350px;
-    position: relative; }
+    position: relative;
+    transition: all 0.5s ease; }
     body .featuredProjects a.project:nth-child(1), body .featuredProjects a.project:nth-child(4), html .featuredProjects a.project:nth-child(1), html .featuredProjects a.project:nth-child(4), #app .featuredProjects a.project:nth-child(1), #app .featuredProjects a.project:nth-child(4), .main .featuredProjects a.project:nth-child(1), .main .featuredProjects a.project:nth-child(4), .homePageRender .featuredProjects a.project:nth-child(1), .homePageRender .featuredProjects a.project:nth-child(4) {
       background: #f9f9f9; }
     body .featuredProjects a.project:nth-child(2), body .featuredProjects a.project:nth-child(3), html .featuredProjects a.project:nth-child(2), html .featuredProjects a.project:nth-child(3), #app .featuredProjects a.project:nth-child(2), #app .featuredProjects a.project:nth-child(3), .main .featuredProjects a.project:nth-child(2), .main .featuredProjects a.project:nth-child(3), .homePageRender .featuredProjects a.project:nth-child(2), .homePageRender .featuredProjects a.project:nth-child(3) {
       background: #fcfcfc; }
     @media only screen and (max-width: 479px) {
       body .featuredProjects a.project, html .featuredProjects a.project, #app .featuredProjects a.project, .main .featuredProjects a.project, .homePageRender .featuredProjects a.project {
-        height: 290px; } }
-    @media only screen and (max-width: 479px) {
-      body .featuredProjects a.project, html .featuredProjects a.project, #app .featuredProjects a.project, .main .featuredProjects a.project, .homePageRender .featuredProjects a.project {
-        height: 250px; } }
-    @media only screen and (max-width: 479px) {
-      body .featuredProjects a.project, html .featuredProjects a.project, #app .featuredProjects a.project, .main .featuredProjects a.project, .homePageRender .featuredProjects a.project {
-        width: 100%; } }
+        height: 250px;
+        width: 100%; }
+        body .featuredProjects a.project:nth-child(1), body .featuredProjects a.project:nth-child(3), html .featuredProjects a.project:nth-child(1), html .featuredProjects a.project:nth-child(3), #app .featuredProjects a.project:nth-child(1), #app .featuredProjects a.project:nth-child(3), .main .featuredProjects a.project:nth-child(1), .main .featuredProjects a.project:nth-child(3), .homePageRender .featuredProjects a.project:nth-child(1), .homePageRender .featuredProjects a.project:nth-child(3) {
+          background: #f9f9f9; }
+        body .featuredProjects a.project:nth-child(2), body .featuredProjects a.project:nth-child(4), html .featuredProjects a.project:nth-child(2), html .featuredProjects a.project:nth-child(4), #app .featuredProjects a.project:nth-child(2), #app .featuredProjects a.project:nth-child(4), .main .featuredProjects a.project:nth-child(2), .main .featuredProjects a.project:nth-child(4), .homePageRender .featuredProjects a.project:nth-child(2), .homePageRender .featuredProjects a.project:nth-child(4) {
+          background: #fcfcfc; } }
     body .featuredProjects a.project img, html .featuredProjects a.project img, #app .featuredProjects a.project img, .main .featuredProjects a.project img, .homePageRender .featuredProjects a.project img {
       max-height: 100%;
       max-width: 100%;
@@ -100,10 +100,13 @@ body, html, #app, .main, .homePageRender {
       bottom: 0;
       right: 0;
       left: 0;
-      margin: auto; }
+      margin: auto;
+      transition: all 0.5s ease; }
       @media only screen and (max-width: 959px) {
         body .featuredProjects a.project img, html .featuredProjects a.project img, #app .featuredProjects a.project img, .main .featuredProjects a.project img, .homePageRender .featuredProjects a.project img {
           max-width: 75%; } }
       @media only screen and (max-width: 479px) {
         body .featuredProjects a.project img, html .featuredProjects a.project img, #app .featuredProjects a.project img, .main .featuredProjects a.project img, .homePageRender .featuredProjects a.project img {
           max-width: 50%; } }
+    body .featuredProjects a.project:hover img, html .featuredProjects a.project:hover img, #app .featuredProjects a.project:hover img, .main .featuredProjects a.project:hover img, .homePageRender .featuredProjects a.project:hover img {
+      transform: scale(0.95); }

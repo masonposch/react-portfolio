@@ -76,6 +76,7 @@ body, html, #app, .main, .homePageRender {
             width: 50%;
             height: 350px;
             position: relative;
+            transition: all 0.5s ease;
             &:nth-child(1), &:nth-child(4){
                 background: #f9f9f9;
             }
@@ -83,13 +84,14 @@ body, html, #app, .main, .homePageRender {
                 background: #fcfcfc;
             }
             @include breakpoint(smallnarrow){
-                height: 290px;
-            }
-            @include breakpoint(smallnarrow){
                 height: 250px;
-            }
-            @include breakpoint(smallnarrow){
                 width: 100%;
+                &:nth-child(1), &:nth-child(3){
+                    background: #f9f9f9;
+                }
+                &:nth-child(2), &:nth-child(4){
+                background: #fcfcfc;
+            }
             }
             img {
                 max-height: 100%;
@@ -102,11 +104,17 @@ body, html, #app, .main, .homePageRender {
                 right: 0;
                 left: 0;
                 margin: auto;
+                transition: all 0.5s ease;
                 @include breakpoint(medium){
                     max-width: 75%;
                 }
                 @include breakpoint(smallnarrow){
                     max-width: 50%;
+                }
+            }
+            &:hover {
+                img{
+                    transform: scale(.95);
                 }
             }
         }
