@@ -5,6 +5,8 @@ import Hero from './homepageChildren/Hero'
 import FeaturedLang from './homepageChildren/FeaturedLang'
 import WorkSamples from './homepageChildren/WorkSamples'
 
+import Footer from './Footer'
+
 
 class Home extends React.Component{
 
@@ -14,6 +16,7 @@ class Home extends React.Component{
 				<Hero />
 				<FeaturedLang />
 				<WorkSamples />
+				<Footer />
 			</div>
 		)
 	}

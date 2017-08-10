@@ -1,7 +1,7 @@
 @import '_global';
 
 //Homepage
-body, html, #app, .main, .homePageRender {
+ .homePageRender {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -69,12 +69,13 @@ body, html, #app, .main, .homePageRender {
         }
     }
 
-
+    //Featured Projects
     .featuredProjects {
+        height: 700px;
         a.project {
             float: left;
             width: 50%;
-            height: 350px;
+            height: 50%;
             position: relative;
             transition: all 0.5s ease;
             &:nth-child(1), &:nth-child(4){
@@ -84,7 +85,7 @@ body, html, #app, .main, .homePageRender {
                 background: #fcfcfc;
             }
             @include breakpoint(smallnarrow){
-                height: 250px;
+                height: 50%;
                 width: 100%;
                 &:nth-child(1), &:nth-child(3){
                     background: #f9f9f9;
@@ -117,6 +118,87 @@ body, html, #app, .main, .homePageRender {
                     transform: scale(.95);
                 }
             }
+        }
+        @include breakpoint(medium) {
+            height: 600px;
+        }
+        @include breakpoint(small) {
+            height: 500px;
+        }
+    }
+
+
+    //Footer
+    .footer {
+        background: #1bbc9b; 
+        height: 100px;
+        width: 100%;
+        float: left;
+        position: relative;
+        p, a {
+            color: #fff;
+            font-family: 'Poppins', sans-serif; 
+        }
+        .contactSocial{
+            width: 100%;
+            .contactInfo {
+                text-align: left;
+                margin: 36px 0 0 0;
+                p {
+                    display: inline-block;
+                    margin: 0 15px 0 40px;
+                    font-size: 20px;
+                }
+                a {
+                    font-size: 20px;
+                }
+                @include breakpoint(small){
+                    text-align: center;
+                    margin: 25px 0 15px 0;
+                    p {
+                        margin: 0;
+                        display: block;
+                        margin: 0 0 15px;
+                    }
+                }
+            }
+            .social {
+                float: right;
+                margin: -31px 0 0 0;
+                a {
+                    margin: 0 50px 0 0;
+                    font-size: 20px;
+                }
+                @include breakpoint(small){
+                    float: none;
+                    display: block;
+                    margin: 0 auto;
+                    width: 270px;
+                    a {
+                        margin: 0 25px 025px;
+                    }
+                }
+            }
+            @include breakpoint(small){
+                margin: 0 0 20px 0;
+            }
+        }
+        .copyright {
+            position: absolute;
+            bottom: 0;
+            margin: 0 0 0 40px;
+            font-size: 12px;
+            a {
+                color: #06327a;
+            }
+            @include breakpoint(small){
+                text-align: center;
+                margin: 0;
+                position: relative;
+            }
+        }
+        @include breakpoint(small){
+            height: 200px;
         }
     }
 
