@@ -113,9 +113,34 @@
                     max-width: 50%;
                 }
             }
+            .summary {
+                background: rgba(21,153,129, 0.2);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: none;
+                p {
+                    color: #fff;
+                    text-decoration: none;
+                    text-align: center;
+                    position: absolute;
+                    margin: 0 auto;
+                    width: 100%;
+                    padding: 10px 30px;
+                    &.role {
+                        top: 10%;
+                    }
+                    &.description {
+                        bottom: 10%;
+                    }
+                }
+            }
             &:hover {
                 img{
                     transform: scale(.95);
+                }
+                .summary {
+                    display: block;
                 }
             }
         }
@@ -124,13 +149,20 @@
         }
         @include breakpoint(small) {
             height: 500px;
+            a.project {
+                &:hover {
+                    .summary{
+                        display: none;
+                    }
+                }
+            }
         }
     }
 
 
     //Footer
     .footer {
-        background: #1bbc9b; 
+        background: #159981; 
         height: 100px;
         width: 100%;
         float: left;
@@ -164,18 +196,25 @@
             }
             .social {
                 float: right;
-                margin: -31px 0 0 0;
+                margin: 33px 0 0 0;
                 a {
                     margin: 0 50px 0 0;
                     font-size: 20px;
+                    i {
+                        color: #06327a;
+                        font-size: 35px;
+                        &:hover {
+                            color: #1bbc9b;
+                        }
+                    }
                 }
                 @include breakpoint(small){
                     float: none;
                     display: block;
-                    margin: 0 auto;
+                    margin: 20px auto;
                     width: 270px;
                     a {
-                        margin: 0 25px 025px;
+                        margin: 0 25px 0 35px;
                     }
                 }
             }
@@ -185,20 +224,22 @@
         }
         .copyright {
             position: absolute;
-            bottom: 0;
+            bottom:29px;
             margin: 0 0 0 40px;
             font-size: 12px;
             a {
                 color: #06327a;
+                &:hover {
+                    color: #1bbc9b;
+                    text-decoration: none;
+                }
             }
             @include breakpoint(small){
                 text-align: center;
                 margin: 0;
+                bottom: 10px;
                 position: relative;
             }
-        }
-        @include breakpoint(small){
-            height: 200px;
         }
     }
 

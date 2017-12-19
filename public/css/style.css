@@ -110,16 +110,38 @@ or wrap each row of columns in a @include row */
         @media only screen and (max-width: 479px) {
           .homePageRender .featuredProjects a.project img {
             max-width: 50%; } }
+      .homePageRender .featuredProjects a.project .summary {
+        background: rgba(21, 153, 129, 0.2);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: none; }
+        .homePageRender .featuredProjects a.project .summary p {
+          color: #fff;
+          text-decoration: none;
+          text-align: center;
+          position: absolute;
+          margin: 0 auto;
+          width: 100%;
+          padding: 10px 30px; }
+          .homePageRender .featuredProjects a.project .summary p.role {
+            top: 10%; }
+          .homePageRender .featuredProjects a.project .summary p.description {
+            bottom: 10%; }
       .homePageRender .featuredProjects a.project:hover img {
         transform: scale(0.95); }
+      .homePageRender .featuredProjects a.project:hover .summary {
+        display: block; }
     @media only screen and (max-width: 959px) {
       .homePageRender .featuredProjects {
         height: 600px; } }
     @media only screen and (max-width: 767px) {
       .homePageRender .featuredProjects {
-        height: 500px; } }
+        height: 500px; }
+        .homePageRender .featuredProjects a.project:hover .summary {
+          display: none; } }
   .homePageRender .footer {
-    background: #1bbc9b;
+    background: #159981;
     height: 100px;
     width: 100%;
     float: left;
@@ -148,33 +170,39 @@ or wrap each row of columns in a @include row */
               margin: 0 0 15px; } }
       .homePageRender .footer .contactSocial .social {
         float: right;
-        margin: -31px 0 0 0; }
+        margin: 33px 0 0 0; }
         .homePageRender .footer .contactSocial .social a {
           margin: 0 50px 0 0;
           font-size: 20px; }
+          .homePageRender .footer .contactSocial .social a i {
+            color: #06327a;
+            font-size: 35px; }
+            .homePageRender .footer .contactSocial .social a i:hover {
+              color: #1bbc9b; }
         @media only screen and (max-width: 767px) {
           .homePageRender .footer .contactSocial .social {
             float: none;
             display: block;
-            margin: 0 auto;
+            margin: 20px auto;
             width: 270px; }
             .homePageRender .footer .contactSocial .social a {
-              margin: 0 25px 025px; } }
+              margin: 0 25px 0 35px; } }
       @media only screen and (max-width: 767px) {
         .homePageRender .footer .contactSocial {
           margin: 0 0 20px 0; } }
     .homePageRender .footer .copyright {
       position: absolute;
-      bottom: 0;
+      bottom: 29px;
       margin: 0 0 0 40px;
       font-size: 12px; }
       .homePageRender .footer .copyright a {
         color: #06327a; }
+        .homePageRender .footer .copyright a:hover {
+          color: #1bbc9b;
+          text-decoration: none; }
       @media only screen and (max-width: 767px) {
         .homePageRender .footer .copyright {
           text-align: center;
           margin: 0;
+          bottom: 10px;
           position: relative; } }
-    @media only screen and (max-width: 767px) {
-      .homePageRender .footer {
-        height: 200px; } }
