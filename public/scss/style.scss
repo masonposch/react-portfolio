@@ -5,15 +5,16 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    letter-spacing: 1px;
     .background-image {
-    	background-image: url(../assets/images/space.jpg);
+    	background-image: url(../assets/images/m-bg-2.png);
         background-size: cover;
         background-repeat: no-repeat;
         height: 100%;
         background-position: center;
         position: relative;
         .background-text {
-        	width: 460px;
+        	width: 480px;
     	    display: block;
             top: 50%;
             left: 50%;
@@ -24,7 +25,7 @@
     	    // padding: 260px 0;
         	h1 {
     			color: #fff;
-    			font-family: 'Poppins', sans-serif;	
+    			font-family: 'Poppins', sans-serif;
                 width: 100%;
     		}
             button {
@@ -34,6 +35,7 @@
                 border-style: none;
                 border-radius: 15px;
                 margin: 40px 0 0 0;
+                letter-spacing: 1px;
                 &:hover {
                     background-color: #159981;
                 }
@@ -52,12 +54,13 @@
         }
     }
 
+    //Featured Languages
     .featured-section {
         background-color: #f2f4f7;
         padding: 40px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;   
+        justify-content: space-around;
         img {
             height: 60px;
             @include breakpoint(medium){
@@ -65,7 +68,24 @@
             }
         }
         @include breakpoint(small) {
-            padding: 40px 131px;
+            // padding: 40px 131px;
+            display: none;
+        }
+    }
+
+    //About Section
+    .about-section {
+        background: #1bbc9b;
+        color: #fff;
+        text-align: center;
+        padding: 30px 20px;
+        img{
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        p {
+            margin: 0;
         }
     }
 
@@ -114,13 +134,15 @@
                 }
             }
             .summary {
-                background: rgba(21,153,129, 0.2);
+                background: rgba(21,153,129, 0.3);
                 position: absolute;
                 width: 100%;
                 height: 100%;
                 display: none;
                 p {
                     color: #fff;
+                    // text-shadow: 1px 1px 5px #7f7f7f;
+                    font-size: 15px;
                     text-decoration: none;
                     text-align: center;
                     position: absolute;
@@ -160,16 +182,25 @@
     }
 
 
+    //FORM SECTION
+    .form-section {
+        background: #fff;
+        color: #159981;
+        text-align: center;
+        float: left;
+    }
+
+
     //Footer
     .footer {
-        background: #159981; 
+        background: #159981;
         height: 100px;
         width: 100%;
         float: left;
         position: relative;
         p, a {
             color: #fff;
-            font-family: 'Poppins', sans-serif; 
+            font-family: 'Poppins', sans-serif;
         }
         .contactSocial{
             width: 100%;
@@ -212,7 +243,7 @@
                     float: none;
                     display: block;
                     margin: 20px auto;
-                    width: 270px;
+                    width: 275px;
                     a {
                         margin: 0 25px 0 35px;
                     }
@@ -246,5 +277,3 @@
 
 
 }
-
-

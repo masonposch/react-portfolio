@@ -21,16 +21,17 @@ or wrap each row of columns in a @include row */
 .homePageRender {
   height: 100%;
   width: 100%;
-  position: absolute; }
+  position: absolute;
+  letter-spacing: 1px; }
   .homePageRender .background-image {
-    background-image: url(../assets/images/space.jpg);
+    background-image: url(../assets/images/m-bg-2.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     background-position: center;
     position: relative; }
     .homePageRender .background-image .background-text {
-      width: 460px;
+      width: 480px;
       display: block;
       top: 50%;
       left: 50%;
@@ -47,7 +48,8 @@ or wrap each row of columns in a @include row */
         padding: 10px 30px;
         border-style: none;
         border-radius: 15px;
-        margin: 40px 0 0 0; }
+        margin: 40px 0 0 0;
+        letter-spacing: 1px; }
         .homePageRender .background-image .background-text button:hover {
           background-color: #159981; }
     @media only screen and (max-width: 959px) {
@@ -71,7 +73,18 @@ or wrap each row of columns in a @include row */
           margin: 0 0 20px 0; } }
     @media only screen and (max-width: 767px) {
       .homePageRender .featured-section {
-        padding: 40px 131px; } }
+        display: none; } }
+  .homePageRender .about-section {
+    background: #1bbc9b;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px; }
+    .homePageRender .about-section img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 20px; }
+    .homePageRender .about-section p {
+      margin: 0; }
   .homePageRender .featuredProjects {
     height: 700px; }
     .homePageRender .featuredProjects a.project {
@@ -111,13 +124,14 @@ or wrap each row of columns in a @include row */
           .homePageRender .featuredProjects a.project img {
             max-width: 50%; } }
       .homePageRender .featuredProjects a.project .summary {
-        background: rgba(21, 153, 129, 0.2);
+        background: rgba(21, 153, 129, 0.3);
         position: absolute;
         width: 100%;
         height: 100%;
         display: none; }
         .homePageRender .featuredProjects a.project .summary p {
           color: #fff;
+          font-size: 15px;
           text-decoration: none;
           text-align: center;
           position: absolute;
@@ -140,6 +154,11 @@ or wrap each row of columns in a @include row */
         height: 500px; }
         .homePageRender .featuredProjects a.project:hover .summary {
           display: none; } }
+  .homePageRender .form-section {
+    background: #fff;
+    color: #159981;
+    text-align: center;
+    float: left; }
   .homePageRender .footer {
     background: #159981;
     height: 100px;
@@ -184,7 +203,7 @@ or wrap each row of columns in a @include row */
             float: none;
             display: block;
             margin: 20px auto;
-            width: 270px; }
+            width: 275px; }
             .homePageRender .footer .contactSocial .social a {
               margin: 0 25px 0 35px; } }
       @media only screen and (max-width: 767px) {
