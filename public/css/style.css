@@ -49,7 +49,8 @@ or wrap each row of columns in a @include row */
         border-style: none;
         border-radius: 15px;
         margin: 40px 0 0 0;
-        letter-spacing: 1px; }
+        letter-spacing: 1px;
+        transition: 0.25s all; }
         .homePageRender .background-image .background-text button:hover {
           background-color: #159981; }
     @media only screen and (max-width: 959px) {
@@ -78,13 +79,26 @@ or wrap each row of columns in a @include row */
     background: #1bbc9b;
     color: #fff;
     text-align: center;
-    padding: 30px 20px; }
+    padding: 30px 180px;
+    position: relative; }
+    .homePageRender .about-section > div {
+      display: inline-block;
+      width: 50%;
+      vertical-align: middle; }
     .homePageRender .about-section img {
       width: 120px;
       border-radius: 50%;
-      margin-bottom: 20px; }
+      transition: 0.25s all; }
     .homePageRender .about-section p {
       margin: 0; }
+    @media only screen and (max-width: 767px) {
+      .homePageRender .about-section {
+        padding: 30px 20px; }
+        .homePageRender .about-section > div {
+          display: block;
+          width: 100%; }
+          .homePageRender .about-section > div img {
+            margin-bottom: 20px; } }
   .homePageRender .featuredProjects {
     height: 700px; }
     .homePageRender .featuredProjects a.project {
@@ -195,7 +209,8 @@ or wrap each row of columns in a @include row */
           font-size: 20px; }
           .homePageRender .footer .contactSocial .social a i {
             color: #06327a;
-            font-size: 35px; }
+            font-size: 35px;
+            transition: 0.25s all; }
             .homePageRender .footer .contactSocial .social a i:hover {
               color: #1bbc9b; }
         @media only screen and (max-width: 767px) {
@@ -215,7 +230,8 @@ or wrap each row of columns in a @include row */
       margin: 0 0 0 40px;
       font-size: 12px; }
       .homePageRender .footer .copyright a {
-        color: #06327a; }
+        color: #06327a;
+        transition: 0.25s all; }
         .homePageRender .footer .copyright a:hover {
           color: #1bbc9b;
           text-decoration: none; }

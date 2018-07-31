@@ -31,10 +31,13 @@ class About extends React.Component {
 
 			<div className="about-section">
 
-				<img src={this.state.aboutImage} onMouseOver={this.onHover} onMouseLeave={this.offHover}/>
-				
-				<p>Full-stack web developer from Austin, Texas. I am currently focusing on front-end and MERN stack technologies, with an emphasis in React.js.</p>	
-				
+				<div>
+					<img src={this.state.aboutImage} onMouseOver={this.onHover} onMouseLeave={this.offHover}/>
+				</div>
+
+				<div>
+					<p>Full-stack web developer from Austin, Texas. I am currently focusing on front-end and MERN stack technologies, with an emphasis in React.js.</p>	
+				</div>
 			</div>
 
 		)
