@@ -9,7 +9,7 @@ class About extends React.Component {
 		super();
 
 		this.state = {
-			aboutImage: '/assets/images/about-bw.png',
+			aboutImage: '/assets/images/about-2.png',
 		}
 
 		this.onHover = this.onHover.bind(this);
@@ -18,11 +18,11 @@ class About extends React.Component {
 
 
 	onHover(){
-		this.setState({aboutImage: '/assets/images/about.png'})
+		this.setState({aboutImage: '/assets/images/about-2.png'})
 	}
 
 	offHover(){
-		this.setState({aboutImage: '/assets/images/about-bw.png'})
+		this.setState({aboutImage: '/assets/images/about-2.png'})
 	}
 
 	render() {

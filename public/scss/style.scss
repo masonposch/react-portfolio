@@ -18,6 +18,7 @@ html, body {
         background-repeat: no-repeat;
         height: 100%;
         background-position: center;
+        background-attachment: fixed;
         position: relative;
         .background-text {
         	width: 480px;
@@ -149,6 +150,9 @@ html, body {
                 left: 0;
                 margin: auto;
                 transition: all 0.5s ease;
+                &.weststar-logo, &.kasasa-logo {
+                    width: 256px;
+                }
                 @include breakpoint(medium){
                     max-width: 75%;
                 }

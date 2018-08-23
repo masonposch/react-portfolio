@@ -13,8 +13,27 @@ class WorkSamples extends React.Component {
 		this.state = {
 			projects: [
 				{
+					title: "Kasasa Nation Home Page Refresh",
+					image: "/assets/images/kasasa-logo.png",
+					specialClass: "kasasa-logo",
+					alt: "Kasasa Nation Home Page", url: "https://kasasa.com/nation/index.html",
+					target: "_blank",
+					role: "Front-end development",
+					description: "A mobile-friendly refresh for the Kasasa Nation Home Page. Along with highlights section with counting functionality",
+				},
+				{
+					title: "WestStar CU Landing Page",
+					image: "/assets/images/weststar-logo.png",
+					specialClass: "weststar-logo",
+					alt: "WestStar CU Landing Page", url: "https://www.weststar.org/home/auto-loans.html",
+					target: "_blank",
+					role: "Front-end development",
+					description: "A mobile-friendly, ADA compliant landing page for marketing purposes, built through the role of Front-End Developer at Kasasa.",
+				},
+				{
 					title: "Bake A Wish",
 					image: "/assets/images/bake-a-wish-logo.png",
+					specialClass: "",
 					alt: "Bake A Wish", url: "http://bakeawishaustin.org/",
 					target: "_blank",
 					role: "Front-end development, Git version control",
@@ -23,6 +42,7 @@ class WorkSamples extends React.Component {
 				{
 					title: "Homeside",
 					image: "/assets/images/homeside-logo.png",
+					specialClass: "",
 					alt: "Homeside", url: "https://mmsk-homeside.herokuapp.com/#/login",
 					target: "_blank",
 					role: "Back-end development",
@@ -31,6 +51,7 @@ class WorkSamples extends React.Component {
 				{
 					title: "Votery",
 					image: "/assets/images/votery-logo.png",
+					specialClass: "",
 					alt: "Votery", url: "https://morning-garden-54466.herokuapp.com/votery",
 					target: "_blank",
 					role: "Back-end development",
@@ -39,6 +60,7 @@ class WorkSamples extends React.Component {
 				{
 					title: "Buyak",
 					image: "/assets/images/buyak-logo.png",
+					specialClass: "",
 					alt: "Buyak", url: "https://quiet-peak-65065.herokuapp.com/",
 					target: "_blank",
 					role: "Front-end development",
@@ -54,7 +76,7 @@ class WorkSamples extends React.Component {
 			return(
 				//Individual key for each project being mapped
 				<a key={d.title} href={d.url} target={d.target} className="project">
-						<img src={d.image} title={d.title} alt={d.alt} />
+						<img src={d.image} title={d.title} alt={d.alt} className={d.specialClass}/>
 						<div className="summary">
 							<p className="role"><strong>Role:</strong> {d.role}</p>
 							<p className="description">{d.description}</p>
