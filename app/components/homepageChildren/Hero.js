@@ -31,7 +31,10 @@ class Hero extends React.Component{
 		console.log(this.state.blur)
 
 		return (
-				<div className="background-image" style={{filter: `grayscale(${this.state.blur}%)`}}>
+				<div className="background-video" style={{filter: `grayscale(${this.state.blur}%)`}}>
+				    <video playsInline="playsinline" autoPlay muted loop id="myVideo">
+				      <source src="/assets/video/mason-drums.mp4" type="video/mp4"></source>
+					</video> 
 					<div className="background-text text-center">
 						<h1>{this.state.greeting}</h1>
 						<button>View My Resume</button>

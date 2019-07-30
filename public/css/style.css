@@ -28,16 +28,25 @@ html, body {
   position: absolute;
   letter-spacing: 1px;
 }
-.homePageRender .background-image {
-  background-image: url(../assets/images/m-bg-2.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100%;
-  background-position: center;
-  background-attachment: fixed;
+.homePageRender .background-video {
+  height: 100vh;
   position: relative;
+  overflow: hidden;
 }
-.homePageRender .background-image .background-text {
+.homePageRender .background-video #myVideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+.homePageRender .background-video .background-text {
   width: 480px;
   display: block;
   top: 50%;
@@ -46,12 +55,13 @@ html, body {
   position: absolute;
   transform: translate(-50%, -50%);
 }
-.homePageRender .background-image .background-text h1 {
+.homePageRender .background-video .background-text h1 {
   color: #fff;
   font-family: "Poppins", sans-serif;
   width: 100%;
+  font-weight: 600;
 }
-.homePageRender .background-image .background-text button {
+.homePageRender .background-video .background-text button {
   color: #fff;
   background-color: #1bbc9b;
   padding: 10px 30px;
@@ -61,19 +71,19 @@ html, body {
   letter-spacing: 1px;
   transition: 0.25s all;
 }
-.homePageRender .background-image .background-text button:hover {
+.homePageRender .background-video .background-text button:hover {
   background-color: #159981;
 }
 @media only screen and (max-width: 959px) {
-  .homePageRender .background-image {
+  .homePageRender .background-video {
     height: 75%;
   }
 }
 @media only screen and (max-width: 767px) {
-  .homePageRender .background-image {
+  .homePageRender .background-video {
     height: 50%;
   }
-  .homePageRender .background-image .background-text h1 {
+  .homePageRender .background-video .background-text h1 {
     font-size: 25px;
   }
 }
@@ -139,10 +149,10 @@ html, body {
   position: relative;
   transition: all 0.5s ease;
 }
-.homePageRender .featuredProjects a.project:nth-child(1), .homePageRender .featuredProjects a.project:nth-child(4) {
+.homePageRender .featuredProjects a.project:nth-child(1), .homePageRender .featuredProjects a.project:nth-child(4), .homePageRender .featuredProjects a.project:nth-child(5), .homePageRender .featuredProjects a.project:nth-child(8) {
   background: #f9f9f9;
 }
-.homePageRender .featuredProjects a.project:nth-child(2), .homePageRender .featuredProjects a.project:nth-child(3) {
+.homePageRender .featuredProjects a.project:nth-child(2), .homePageRender .featuredProjects a.project:nth-child(3), .homePageRender .featuredProjects a.project:nth-child(6), .homePageRender .featuredProjects a.project:nth-child(7) {
   background: #fcfcfc;
 }
 @media only screen and (max-width: 479px) {

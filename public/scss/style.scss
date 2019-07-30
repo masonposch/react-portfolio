@@ -12,14 +12,29 @@ html, body {
     width: 100%;
     position: absolute;
     letter-spacing: 1px;
-    .background-image {
-    	background-image: url(../assets/images/m-bg-2.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
-        background-position: center;
-        background-attachment: fixed;
+    .background-video {
+    	// background-image: url(../assets/images/m-bg-2.png);
+        // background-size: cover;
+        // background-repeat: no-repeat;
+        // height: 100%;
+        // background-position: center;
+        // background-attachment: fixed;
+        height: 100vh;
         position: relative;
+        overflow: hidden;
+        #myVideo {
+          position: fixed;
+          top: 50%; 
+          left: 50%;
+          -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+          min-width: 100%; 
+          min-height: 100%; 
+          width: auto; 
+          height: auto;
+          z-index: -1000; 
+          overflow: hidden;
+        }
         .background-text {
         	width: 480px;
     	    display: block;
@@ -34,6 +49,7 @@ html, body {
     			color: #fff;
     			font-family: 'Poppins', sans-serif;
                 width: 100%;
+                font-weight: 600;
     		}
             button {
                 color: #fff;
@@ -122,10 +138,10 @@ html, body {
             height: 50%;
             position: relative;
             transition: all 0.5s ease;
-            &:nth-child(1), &:nth-child(4){
+            &:nth-child(1), &:nth-child(4), &:nth-child(5), &:nth-child(8){
                 background: #f9f9f9;
             }
-            &:nth-child(2), &:nth-child(3){
+            &:nth-child(2), &:nth-child(3), &:nth-child(6), &:nth-child(7){
                 background: #fcfcfc;
             }
             @include breakpoint(smallnarrow){
