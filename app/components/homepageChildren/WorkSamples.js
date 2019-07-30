@@ -25,7 +25,7 @@ class WorkSamples extends React.Component {
 					title: "SleptInMusic.com",
 					image: "/assets/images/slept-in.png",
 					specialClass: "slept-in-logo",
-					alt: "Slept In", url: "https://sleptinmusic.com",
+					alt: "Slept In", url: "http://www.sleptinmusic.com/",
 					target: "_blank",
 					role: "Front-end development, React.js",
 					description: "A mobile-friendly website for the my band, Slept In",
