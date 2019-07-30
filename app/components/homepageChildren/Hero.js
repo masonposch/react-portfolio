@@ -7,8 +7,9 @@ class Hero extends React.Component{
 
 	constructor(){
 		super();
-		this.state = { 
+		this.state = {
 			greeting: 'Welcome',
+			title: '',
 			blur: 0,
 		}
 
@@ -17,7 +18,7 @@ class Hero extends React.Component{
 	}
 
 	imageBlur() {
-		var top = window.pageYOffset/5; 
+		var top = window.pageYOffset/5;
 		this.setState({blur: top})
 	}
 
@@ -26,17 +27,19 @@ class Hero extends React.Component{
 
 		setTimeout(() => {
 			this.setState({ greeting: "My name is Mason Posch" });
-		}, 3000) 
+			this.setState({ title: "Front-End Developer" });
+		}, 3000)
 
 		console.log(this.state.blur)
 
 		return (
 				<div className="background-video" style={{filter: `grayscale(${this.state.blur}%)`}}>
-				    <video playsInline="playsinline" autoPlay muted loop id="myVideo">
+				  <video playsInline="playsinline" autoPlay muted loop id="myVideo" className="noMobile">
 				      <source src="/assets/video/mason-drums.mp4" type="video/mp4"></source>
-					</video> 
+					</video>
 					<div className="background-text text-center">
 						<h1>{this.state.greeting}</h1>
+						<h3>{this.state.title}</h3>
 						<button>View My Resume</button>
 					</div>
 				</div>

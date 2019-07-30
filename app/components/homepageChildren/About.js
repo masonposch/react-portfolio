@@ -30,13 +30,11 @@ class About extends React.Component {
 		return(
 
 			<div className="about-section">
-
-				<div>
-					<img src={this.state.aboutImage} onMouseOver={this.onHover} onMouseLeave={this.offHover}/>
+				<div className="mobile">
+					<img src={this.state.aboutImage} onMouseOver={this.onHover} onMouseLeave={this.offHover} />
 				</div>
-
 				<div>
-					<p>Full-stack web developer from Austin, Texas. I am currently focusing on front-end and MERN stack technologies, with an emphasis in React.js.</p>	
+					<p>Full-stack web developer from Austin, Texas. I am currently focusing on front-end and MERN stack technologies, with an emphasis in React.js.</p>
 				</div>
 			</div>
 
@@ -49,4 +47,4 @@ class About extends React.Component {
 
 
 
-export default About; 
+export default About;
