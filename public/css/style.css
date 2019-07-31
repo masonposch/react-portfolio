@@ -56,7 +56,9 @@ html, body {
         width: 100%;
         font-weight: 600;
         text-shadow: 0px 2px 20px #000; }
-      .homePageRender .background-video .background-text button {
+      .homePageRender .background-video .background-text h3 {
+        margin-bottom: 40px; }
+      .homePageRender .background-video .background-text a.button {
         color: #fff;
         background-color: #1bbc9b;
         padding: 10px 30px;
@@ -65,8 +67,26 @@ html, body {
         margin: 40px 0 0 0;
         letter-spacing: 1px;
         transition: 0.25s all; }
-        .homePageRender .background-video .background-text button:hover {
-          background-color: #159981; }
+        .homePageRender .background-video .background-text a.button:hover {
+          background-color: #159981;
+          text-decoration: none;
+          -webkit-box-shadow: 0px 5px 15px -4px #080708;
+          -moz-box-shadow: 0px 5px 15px -4px #080708;
+          box-shadow: 0px 5px 15px -4px #080708; }
+    .homePageRender .background-video .view-more {
+      color: #fff;
+      position: absolute;
+      bottom: 20px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
+      text-shadow: 0px 2px 20px #000; }
+      .homePageRender .background-video .view-more i {
+        border: 2px solid #fff;
+        border-radius: 50%;
+        padding: 3px; }
     @media only screen and (max-width: 959px) {
       .homePageRender .background-video {
         height: 75%; } }

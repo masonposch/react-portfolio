@@ -9,7 +9,7 @@ class Footer extends React.Component {
 
 		this.state = {
 			social: [
-				{ platform: "Resume", logo: "far fa-file-alt", url: "#" },
+				{ platform: "Resume", logo: "far fa-file-alt", url: "/assets/pdfs/resume_mason-posch.pdf" },
 				{ platform: "Github", logo: "fab fa-github", url: "https://github.com/masonposch"},
 				{ platform: "LinkedIn", logo: "fab fa-linkedin", url: "https://www.linkedin.com/in/mason-posch-7486b599/" },
 			]

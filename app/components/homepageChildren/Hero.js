@@ -27,7 +27,7 @@ class Hero extends React.Component{
 
 		setTimeout(() => {
 			this.setState({ greeting: "My name is Mason Posch" });
-			this.setState({ title: "Front-End Developer" });
+			this.setState({ title: "Front-end developer from Austin, TX" });
 		}, 3000)
 
 		console.log(this.state.blur)
@@ -40,7 +40,11 @@ class Hero extends React.Component{
 					<div className="background-text text-center">
 						<h1>{this.state.greeting}</h1>
 						<h3>{this.state.title}</h3>
-						<button>View My Resume</button>
+						<a className="button" href="/assets/pdfs/resume_mason-posch.pdf" target="_blank">View My Resume</a>
+					</div>
+					<div className="view-more">
+						<h5>View more of my day job</h5>
+						<i className="fa fa-chevron-down"></i>
 					</div>
 				</div>
 		)
