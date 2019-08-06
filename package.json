@@ -18,7 +18,7 @@
     "url": "https://github.com/masonposch/react-portfolio/issues"
   },
   "engines": {
-    "node": "10.x"
+    "node": "8.11.4"
   },
   "homepage": "https://github.com/masonposch/react-portfolio#readme",
   "dependencies": {
