@@ -35,7 +35,7 @@ class Footer extends React.Component {
 					</div>
 				</div>
 				<div className="copyright">
-					<p>&copy; 2017 | Made by <b>Mason Posch</b> | Find it all <a href="https://github.com/masonposch/react-portfolio" target="_blank">here</a>.</p>
+					<p>&copy; 2019 | Made by <b>Mason Posch</b> | Find it all <a href="https://github.com/masonposch/react-portfolio" target="_blank">here</a>.</p>
 				</div>
 			</div>
 

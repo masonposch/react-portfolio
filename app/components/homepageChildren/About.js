@@ -34,7 +34,7 @@ class About extends React.Component {
 					<img src={this.state.aboutImage} onMouseOver={this.onHover} onMouseLeave={this.offHover} />
 				</div>
 				<div>
-					<p>Full-stack web developer from Austin, Texas. I am currently focusing on front-end and MERN stack technologies, with an emphasis in React.js.</p>
+					<p>Front-end developer seasoned in HubSpot CMS and multiple JavaScript frameworks. Experience in responsive projects with excellent user experience.</p>
 				</div>
 			</div>
 

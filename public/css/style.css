@@ -19,304 +19,406 @@
 or wrap each row of columns in a @include row */
 /* You can also use a @include clear to clear columns */
 html, body {
-  x-overflow: none; }
+  x-overflow: none;
+}
 
 .homePageRender {
   height: 100%;
   width: 100%;
   position: absolute;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+}
+.homePageRender .background-video {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.homePageRender .background-video #myVideo {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+}
+.homePageRender .background-video .background-text {
+  width: 480px;
+  display: block;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.homePageRender .background-video .background-text h1, .homePageRender .background-video .background-text h3 {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  font-weight: 600;
+  text-shadow: 0px 2px 20px #000;
+}
+.homePageRender .background-video .background-text h3 {
+  margin-bottom: 40px;
+}
+.homePageRender .background-video .background-text a.button {
+  color: #fff;
+  background-color: #1bbc9b;
+  padding: 10px 30px;
+  border-style: none;
+  border-radius: 15px;
+  margin: 40px 0 0 0;
+  letter-spacing: 1px;
+  transition: 0.25s all;
+}
+.homePageRender .background-video .background-text a.button:hover {
+  background-color: #159981;
+  text-decoration: none;
+  -webkit-box-shadow: 0px 5px 15px -4px #080708;
+  -moz-box-shadow: 0px 5px 15px -4px #080708;
+  box-shadow: 0px 5px 15px -4px #080708;
+}
+.homePageRender .background-video .view-more {
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-shadow: 0px 2px 20px #000;
+}
+.homePageRender .background-video .view-more i {
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 3px;
+}
+@media only screen and (max-width: 959px) {
   .homePageRender .background-video {
-    height: 100vh;
-    position: relative;
-    overflow: hidden; }
-    .homePageRender .background-video #myVideo {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -1000;
-      overflow: hidden; }
-    .homePageRender .background-video .background-text {
-      width: 480px;
-      display: block;
-      top: 50%;
-      left: 50%;
-      text-align: center;
-      position: absolute;
-      transform: translate(-50%, -50%); }
-      .homePageRender .background-video .background-text h1, .homePageRender .background-video .background-text h3 {
-        color: #fff;
-        font-family: 'Poppins', sans-serif;
-        width: 100%;
-        font-weight: 600;
-        text-shadow: 0px 2px 20px #000; }
-      .homePageRender .background-video .background-text h3 {
-        margin-bottom: 40px; }
-      .homePageRender .background-video .background-text a.button {
-        color: #fff;
-        background-color: #1bbc9b;
-        padding: 10px 30px;
-        border-style: none;
-        border-radius: 15px;
-        margin: 40px 0 0 0;
-        letter-spacing: 1px;
-        transition: 0.25s all; }
-        .homePageRender .background-video .background-text a.button:hover {
-          background-color: #159981;
-          text-decoration: none;
-          -webkit-box-shadow: 0px 5px 15px -4px #080708;
-          -moz-box-shadow: 0px 5px 15px -4px #080708;
-          box-shadow: 0px 5px 15px -4px #080708; }
-    .homePageRender .background-video .view-more {
-      color: #fff;
-      position: absolute;
-      bottom: 20px;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      text-align: center;
-      text-shadow: 0px 2px 20px #000; }
-      .homePageRender .background-video .view-more i {
-        border: 2px solid #fff;
-        border-radius: 50%;
-        padding: 3px; }
-    @media only screen and (max-width: 959px) {
-      .homePageRender .background-video {
-        height: 75%; } }
-    @media only screen and (max-width: 767px) {
-      .homePageRender .background-video {
-        background-image: url(../assets/images/mobile-bg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-attachment: fixed;
-        height: 50%; }
-        .homePageRender .background-video .background-text h1 {
-          font-size: 25px; } }
+    height: 75%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .homePageRender .background-video {
+    background-image: url(../assets/images/mobile-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 50%;
+  }
+  .homePageRender .background-video .background-text h1 {
+    font-size: 20px;
+  }
+  .homePageRender .background-video .background-text h3 {
+    font-size: 14px;
+  }
+  .homePageRender .background-video .view-more {
+    display: none;
+  }
+}
+.homePageRender .featured-section {
+  background-color: #f2f4f7;
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.homePageRender .featured-section img {
+  height: 60px;
+}
+@media only screen and (max-width: 959px) {
+  .homePageRender .featured-section img {
+    margin: 0 0 20px 0;
+  }
+}
+@media only screen and (max-width: 767px) {
   .homePageRender .featured-section {
-    background-color: #f2f4f7;
-    padding: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; }
-    .homePageRender .featured-section img {
-      height: 60px; }
-      @media only screen and (max-width: 959px) {
-        .homePageRender .featured-section img {
-          margin: 0 0 20px 0; } }
-    @media only screen and (max-width: 767px) {
-      .homePageRender .featured-section {
-        display: none; } }
+    display: none;
+  }
+}
+.homePageRender .about-section {
+  background: #1bbc9b;
+  color: #fff;
+  text-align: center;
+  padding: 30px 180px;
+  position: relative;
+}
+.homePageRender .about-section > div {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+}
+.homePageRender .about-section img {
+  width: 120px;
+  border-radius: 50%;
+  transition: 0.25s all;
+}
+.homePageRender .about-section p {
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
   .homePageRender .about-section {
-    background: #1bbc9b;
-    color: #fff;
-    text-align: center;
-    padding: 30px 180px;
-    position: relative; }
-    .homePageRender .about-section > div {
-      display: inline-block;
-      width: 50%;
-      vertical-align: middle; }
-    .homePageRender .about-section img {
-      width: 120px;
-      border-radius: 50%;
-      transition: 0.25s all; }
-    .homePageRender .about-section p {
-      margin: 0; }
-    @media only screen and (max-width: 767px) {
-      .homePageRender .about-section {
-        padding: 30px 20px; }
-        .homePageRender .about-section > div {
-          display: block;
-          width: 100%; }
-          .homePageRender .about-section > div img {
-            margin-bottom: 20px; } }
-  .homePageRender .featuredProjects {
-    height: 700px; }
-    .homePageRender .featuredProjects a.project {
-      float: left;
-      width: 50%;
-      height: 50%;
-      position: relative;
-      transition: all 0.5s ease; }
-      .homePageRender .featuredProjects a.project:nth-child(1), .homePageRender .featuredProjects a.project:nth-child(4), .homePageRender .featuredProjects a.project:nth-child(5), .homePageRender .featuredProjects a.project:nth-child(8) {
-        background: #f9f9f9; }
-      .homePageRender .featuredProjects a.project:nth-child(2), .homePageRender .featuredProjects a.project:nth-child(3), .homePageRender .featuredProjects a.project:nth-child(6), .homePageRender .featuredProjects a.project:nth-child(7) {
-        background: #fcfcfc; }
-      @media only screen and (max-width: 479px) {
-        .homePageRender .featuredProjects a.project {
-          height: 50%;
-          width: 100%; }
-          .homePageRender .featuredProjects a.project:nth-child(1), .homePageRender .featuredProjects a.project:nth-child(3) {
-            background: #f9f9f9; }
-          .homePageRender .featuredProjects a.project:nth-child(2), .homePageRender .featuredProjects a.project:nth-child(4) {
-            background: #fcfcfc; } }
-      .homePageRender .featuredProjects a.project img {
-        max-height: 100%;
-        max-width: 100%;
-        width: auto;
-        height: auto;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        margin: auto;
-        transition: all 0.5s ease; }
-        .homePageRender .featuredProjects a.project img.weststar-logo, .homePageRender .featuredProjects a.project img.kasasa-logo {
-          width: 256px; }
-        @media only screen and (max-width: 959px) {
-          .homePageRender .featuredProjects a.project img {
-            max-width: 75%; } }
-        @media only screen and (max-width: 479px) {
-          .homePageRender .featuredProjects a.project img {
-            max-width: 50%; } }
-      .homePageRender .featuredProjects a.project .summary {
-        background: rgba(21, 153, 129, 0.3);
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: none; }
-        .homePageRender .featuredProjects a.project .summary p {
-          color: #fff;
-          font-size: 15px;
-          text-decoration: none;
-          text-align: center;
-          position: absolute;
-          margin: 0 auto;
-          width: 100%;
-          padding: 10px 30px; }
-          .homePageRender .featuredProjects a.project .summary p.role {
-            top: 10%; }
-          .homePageRender .featuredProjects a.project .summary p.description {
-            bottom: 10%; }
-      .homePageRender .featuredProjects a.project:hover img {
-        transform: scale(0.95); }
-      .homePageRender .featuredProjects a.project:hover .summary {
-        display: block; }
-    @media only screen and (max-width: 959px) {
-      .homePageRender .featuredProjects {
-        height: 600px; } }
-    @media only screen and (max-width: 767px) {
-      .homePageRender .featuredProjects {
-        height: 500px; }
-        .homePageRender .featuredProjects a.project:hover .summary {
-          display: none; } }
-  .homePageRender .form-section {
-    background: #fff;
-    color: #159981;
-    text-align: center;
-    float: left; }
-  .homePageRender .footer {
-    background: #159981;
-    height: 100px;
+    padding: 30px 20px;
+  }
+  .homePageRender .about-section > div {
+    display: block;
     width: 100%;
-    float: left;
-    position: relative; }
-    .homePageRender .footer p, .homePageRender .footer a {
-      color: #fff;
-      font-family: 'Poppins', sans-serif; }
-    .homePageRender .footer .contactSocial {
-      width: 100%; }
-      .homePageRender .footer .contactSocial .contactInfo {
-        text-align: left;
-        margin: 36px 0 0 0; }
-        .homePageRender .footer .contactSocial .contactInfo p {
-          display: inline-block;
-          margin: 0 15px 0 40px;
-          font-size: 20px; }
-        .homePageRender .footer .contactSocial .contactInfo a {
-          font-size: 20px; }
-        @media only screen and (max-width: 767px) {
-          .homePageRender .footer .contactSocial .contactInfo {
-            text-align: center;
-            margin: 25px 0 15px 0; }
-            .homePageRender .footer .contactSocial .contactInfo p {
-              margin: 0;
-              display: block;
-              margin: 0 0 15px; } }
-      .homePageRender .footer .contactSocial .social {
-        float: right;
-        margin: 33px 0 0 0; }
-        .homePageRender .footer .contactSocial .social a {
-          margin: 0 50px 0 0;
-          font-size: 20px; }
-          .homePageRender .footer .contactSocial .social a i {
-            color: #06327a;
-            font-size: 35px;
-            transition: 0.25s all; }
-            .homePageRender .footer .contactSocial .social a i:hover {
-              color: #1bbc9b; }
-        @media only screen and (max-width: 767px) {
-          .homePageRender .footer .contactSocial .social {
-            float: none;
-            display: block;
-            margin: 20px auto;
-            width: 275px; }
-            .homePageRender .footer .contactSocial .social a {
-              margin: 0 25px 0 35px; } }
-      @media only screen and (max-width: 767px) {
-        .homePageRender .footer .contactSocial {
-          margin: 0 0 20px 0; } }
-    .homePageRender .footer .copyright {
-      position: absolute;
-      bottom: 29px;
-      margin: 0 0 0 40px;
-      font-size: 12px; }
-      .homePageRender .footer .copyright a {
-        color: #06327a;
-        transition: 0.25s all; }
-        .homePageRender .footer .copyright a:hover {
-          color: #1bbc9b;
-          text-decoration: none; }
-      @media only screen and (max-width: 767px) {
-        .homePageRender .footer .copyright {
-          text-align: center;
-          margin: 0;
-          bottom: 10px;
-          position: relative; } }
-  .homePageRender .testimonial-section {
-    padding: 50px 0;
-    float: left;
-    width: 100%; }
-    .homePageRender .testimonial-section .testimonial {
-      display: block;
-      width: 500px;
-      margin: 0 auto 100px; }
-      .homePageRender .testimonial-section .testimonial:last-of-type {
-        margin-bottom: 0; }
-      .homePageRender .testimonial-section .testimonial p {
-        font-size: 16px;
-        line-height: 1.5; }
-        .homePageRender .testimonial-section .testimonial p.name {
-          font-weight: bold;
-          text-align: right; }
-      .homePageRender .testimonial-section .testimonial .quote {
-        color: #1bbc9b;
-        font-size: 35px;
-        margin: 10px 0; }
-        .homePageRender .testimonial-section .testimonial .quote.right {
-          float: right;
-          margin: 0; }
-    @media only screen and (max-width: 767px) {
-      .homePageRender .testimonial-section .testimonial {
-        width: 75%; } }
+  }
+  .homePageRender .about-section > div img {
+    margin-bottom: 20px;
+  }
+}
+.homePageRender .featuredProjects {
+  height: 700px;
+}
+.homePageRender .featuredProjects a.project {
+  float: left;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  transition: all 0.5s ease;
+}
+.homePageRender .featuredProjects a.project:nth-child(1), .homePageRender .featuredProjects a.project:nth-child(4), .homePageRender .featuredProjects a.project:nth-child(5), .homePageRender .featuredProjects a.project:nth-child(8) {
+  background: #f9f9f9;
+}
+.homePageRender .featuredProjects a.project:nth-child(2), .homePageRender .featuredProjects a.project:nth-child(3), .homePageRender .featuredProjects a.project:nth-child(6), .homePageRender .featuredProjects a.project:nth-child(7) {
+  background: #fcfcfc;
+}
+@media only screen and (max-width: 479px) {
+  .homePageRender .featuredProjects a.project {
+    height: 50%;
+    width: 100%;
+  }
+  .homePageRender .featuredProjects a.project:nth-child(1), .homePageRender .featuredProjects a.project:nth-child(3) {
+    background: #f9f9f9;
+  }
+  .homePageRender .featuredProjects a.project:nth-child(2), .homePageRender .featuredProjects a.project:nth-child(4) {
+    background: #fcfcfc;
+  }
+}
+.homePageRender .featuredProjects a.project img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  transition: all 0.5s ease;
+}
+.homePageRender .featuredProjects a.project img.weststar-logo, .homePageRender .featuredProjects a.project img.kasasa-logo {
+  width: 256px;
+}
+@media only screen and (max-width: 959px) {
+  .homePageRender .featuredProjects a.project img {
+    max-width: 75%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .homePageRender .featuredProjects a.project img {
+    max-width: 50%;
+  }
+}
+.homePageRender .featuredProjects a.project .summary {
+  background: rgba(21, 153, 129, 0.3);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.homePageRender .featuredProjects a.project .summary p {
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  margin: 0 auto;
+  width: 100%;
+  padding: 10px 30px;
+}
+.homePageRender .featuredProjects a.project .summary p.role {
+  top: 10%;
+}
+.homePageRender .featuredProjects a.project .summary p.description {
+  bottom: 10%;
+}
+.homePageRender .featuredProjects a.project:hover img {
+  transform: scale(0.95);
+}
+.homePageRender .featuredProjects a.project:hover .summary {
+  display: block;
+}
+@media only screen and (max-width: 959px) {
+  .homePageRender .featuredProjects {
+    height: 600px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .homePageRender .featuredProjects {
+    height: 500px;
+  }
+  .homePageRender .featuredProjects a.project:hover .summary {
+    display: none;
+  }
+}
+.homePageRender .form-section {
+  background: #fff;
+  color: #159981;
+  text-align: center;
+  float: left;
+}
+.homePageRender .footer {
+  background: #159981;
+  height: 100px;
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.homePageRender .footer p, .homePageRender .footer a {
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+.homePageRender .footer .contactSocial {
+  width: 100%;
+}
+.homePageRender .footer .contactSocial .contactInfo {
+  text-align: left;
+  margin: 36px 0 0 0;
+}
+.homePageRender .footer .contactSocial .contactInfo p {
+  display: inline-block;
+  margin: 0 15px 0 40px;
+  font-size: 20px;
+}
+.homePageRender .footer .contactSocial .contactInfo a {
+  font-size: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .homePageRender .footer .contactSocial .contactInfo {
+    text-align: center;
+    margin: 25px 0 15px 0;
+  }
+  .homePageRender .footer .contactSocial .contactInfo p {
+    margin: 0;
+    display: block;
+    margin: 0 0 15px;
+  }
+}
+.homePageRender .footer .contactSocial .social {
+  float: right;
+  margin: 33px 0 0 0;
+}
+.homePageRender .footer .contactSocial .social a {
+  margin: 0 50px 0 0;
+  font-size: 20px;
+}
+.homePageRender .footer .contactSocial .social a i {
+  color: #06327a;
+  font-size: 35px;
+  transition: 0.25s all;
+}
+.homePageRender .footer .contactSocial .social a i:hover {
+  color: #1bbc9b;
+}
+@media only screen and (max-width: 767px) {
+  .homePageRender .footer .contactSocial .social {
+    float: none;
+    display: block;
+    margin: 20px auto;
+    width: 275px;
+  }
+  .homePageRender .footer .contactSocial .social a {
+    margin: 0 25px 0 35px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .homePageRender .footer .contactSocial {
+    margin: 0 0 20px 0;
+  }
+}
+.homePageRender .footer .copyright {
+  position: absolute;
+  bottom: 29px;
+  margin: 0 0 0 40px;
+  font-size: 12px;
+}
+.homePageRender .footer .copyright a {
+  color: #06327a;
+  transition: 0.25s all;
+}
+.homePageRender .footer .copyright a:hover {
+  color: #1bbc9b;
+  text-decoration: none;
+}
+@media only screen and (max-width: 767px) {
+  .homePageRender .footer .copyright {
+    text-align: center;
+    margin: 0;
+    bottom: 10px;
+    position: relative;
+  }
+}
+.homePageRender .testimonial-section {
+  padding: 50px 0;
+  float: left;
+  width: 100%;
+}
+.homePageRender .testimonial-section .testimonial {
+  display: block;
+  width: 500px;
+  margin: 0 auto 100px;
+}
+.homePageRender .testimonial-section .testimonial:last-of-type {
+  margin-bottom: 0;
+}
+.homePageRender .testimonial-section .testimonial p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+.homePageRender .testimonial-section .testimonial p.name {
+  font-weight: bold;
+  text-align: right;
+}
+.homePageRender .testimonial-section .testimonial .quote {
+  color: #1bbc9b;
+  font-size: 35px;
+  margin: 10px 0;
+}
+.homePageRender .testimonial-section .testimonial .quote.right {
+  float: right;
+  margin: 0;
+}
+@media only screen and (max-width: 767px) {
+  .homePageRender .testimonial-section .testimonial {
+    width: 75%;
+  }
+}
 
 .noMobile {
-  display: block !important; }
-  @media only screen and (max-width: 767px) {
-    .noMobile {
-      display: none !important; } }
+  display: block !important;
+}
+@media only screen and (max-width: 767px) {
+  .noMobile {
+    display: none !important;
+  }
+}
 
 .mobile {
-  display: none !important; }
-  @media only screen and (max-width: 767px) {
-    .mobile {
-      display: block !important; } }
+  display: none !important;
+}
+@media only screen and (max-width: 767px) {
+  .mobile {
+    display: block !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

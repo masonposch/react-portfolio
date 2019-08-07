@@ -101,8 +101,14 @@ html, body {
             height: 50%;
             .background-text {
                 h1 {
-                    font-size: 25px;
+                    font-size: 20px;
                 }
+                h3 {
+                    font-size: 14px;
+                }
+            }
+            .view-more {
+                display: none;
             }
         }
     }
