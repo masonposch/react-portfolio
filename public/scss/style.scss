@@ -36,7 +36,7 @@ html, body {
           overflow: hidden;
         }
         .background-text {
-        	width: 480px;
+        	width: 500px;
     	    display: block;
             top: 50%;
             left: 50%;
@@ -120,16 +120,21 @@ html, body {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        img {
-            height: 60px;
-            @include breakpoint(medium){
-                margin: 0 0 20px 0;
-            }
+        > div {
+          max-width: 150px;
+          img {
+              max-width: 100%;
+              max-height: 60px;
+              @include breakpoint(medium){
+                  margin: 0 0 20px 0;
+              }
+          }
         }
         @include breakpoint(small) {
             // padding: 40px 131px;
             display: none;
         }
+
     }
 
     //About Section

@@ -17,7 +17,6 @@ class Home extends React.Component{
 		return (
 			<div className="homePageRender">
 				<Hero />
-				<FeaturedLang />
 				<About />
 				<WorkSamples />
 				<Testimonials />
@@ -30,3 +29,6 @@ class Home extends React.Component{
 
 
 export default Home;
+
+
+// <FeaturedLang />

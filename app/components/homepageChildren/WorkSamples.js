@@ -114,7 +114,7 @@ class WorkSamples extends React.Component {
 
 		return(
 
-			<div className="featuredProjects">
+			<div className="featuredProjects" id="featuredWork">
 				{project}
 			</div>
 

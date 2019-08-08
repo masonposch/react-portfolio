@@ -15,14 +15,14 @@ class FeaturedLang extends React.Component {
 		return(
 
 			<div className="featured-section">
-				
-					<img className="logo" src={"/assets/images/mongodb-logo.png"} alt="MongoDB" title="MongoDB" />
-					<img className="logo" src={"/assets/images/express-logo.png"} alt="Express JS" title="Express JS" />
-					<img className="logo" src={"/assets/images/react-logo.png"} alt="React JS" title="React JS" />
-					<img className="logo" src={"/assets/images/node-logo.png"} alt="Node JS" title="Node JS" />
-					<img className="logo" src={"/assets/images/sass-logo.png"} alt="SASS" title="SASS" />
-					<img className="logo" src={"/assets/images/html5-logo.png"} alt="HTML 5" title="HTML 5" />
-				
+
+					<div><img className="logo" src={"/assets/images/mongodb-logo.png"} alt="MongoDB" title="MongoDB" /></div>
+					<div><img className="logo" src={"/assets/images/express-logo.png"} alt="Express JS" title="Express JS" /></div>
+					<div><img className="logo" src={"/assets/images/react-logo.png"} alt="React JS" title="React JS" /></div>
+					<div><img className="logo" src={"/assets/images/node-logo.png"} alt="Node JS" title="Node JS" /></div>
+					<div><img className="logo" src={"/assets/images/sass-logo.png"} alt="SASS" title="SASS" /></div>
+					<div><img className="logo" src={"/assets/images/html5-logo.png"} alt="HTML 5" title="HTML 5" /></div>
+
 			</div>
 
 		)
@@ -34,4 +34,4 @@ class FeaturedLang extends React.Component {
 
 
 
-export default FeaturedLang; 
+export default FeaturedLang;
