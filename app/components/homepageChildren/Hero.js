@@ -44,7 +44,7 @@ class Hero extends React.Component{
 					</div>
 					<div className="view-more">
 						<h5>View more of my day job</h5>
-						<i className="fa fa-chevron-down"></i>
+						<a href="#featuredWork"><i className="fa fa-chevron-down"></i></a>
 					</div>
 				</div>
 		)
